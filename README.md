@@ -1,4 +1,4 @@
-# Bank Application Api
+# Bank Application API
 Applicação de contexto bancário utilizando Java 17, Spring Boot 3 e Railway
 
 # Diagrama de classes
