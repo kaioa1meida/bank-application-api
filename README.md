@@ -1,7 +1,7 @@
 # bank-application-api
 Applicação de contexto bancário utilizando Java 17, Spring Boot 3 e Railway
 
-Diagrama de classes
+# Diagrama de classes
 ```mermaid
 classDiagram
   class User {
