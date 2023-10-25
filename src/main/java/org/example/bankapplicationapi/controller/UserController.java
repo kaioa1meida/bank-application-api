@@ -4,9 +4,10 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import io.swagger.v3.oas.annotations.tags.Tag;
+
 import org.example.bankapplicationapi.controller.dto.UserDto;
-import org.example.bankapplicationapi.domain.model.User;
 import org.example.bankapplicationapi.service.UserService;
+
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
@@ -18,13 +19,13 @@ import java.util.stream.Collectors;
 @CrossOrigin
 @RestController
 @RequestMapping("/users")
-@Tag(name = "Users Controller", description = "Restful API for manager users bank")
+@Tag(name = "Users Controller", description = "RESTful API for managing users.")
 public record UserController(UserService userService) {
 
     @GetMapping
     @Operation(summary = "Get all users", description = "Retrieve a list of all registered users")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Operation Successful")
+            @ApiResponse(responseCode = "200", description = "Operation successful")
     })
     public ResponseEntity<List<UserDto>> findAll() {
         var users = userService.findAll();
@@ -80,5 +81,4 @@ public record UserController(UserService userService) {
         userService.delete(id);
         return ResponseEntity.noContent().build();
     }
-
 }
