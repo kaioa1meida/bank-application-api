@@ -12,7 +12,7 @@ public class Card {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String number;
-    private BigDecimal maxLimit;
+    private BigDecimal max_limit;
 
     public Long getId() {
         return id;
@@ -31,10 +31,10 @@ public class Card {
     }
 
     public BigDecimal getMaxLimit() {
-        return maxLimit;
+        return max_limit;
     }
 
-    public void setMaxLimit(BigDecimal maxLimit) {
-        this.maxLimit = maxLimit;
+    public void setMaxLimit(BigDecimal max_limit) {
+        this.max_limit = max_limit;
     }
 }
