@@ -1,9 +1,6 @@
 package org.example.bankapplicationapi.domain.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import java.math.BigDecimal;
 @Entity(name= "tb_accounts")
@@ -12,9 +9,12 @@ public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @Column(unique = true)
     private String number;
     private String agency;
+    @Column(precision = 13, scale = 2)
     private BigDecimal balance;
+    @Column(precision = 13, scale = 2)
     private BigDecimal available_limit;
 
     public Long getId() {

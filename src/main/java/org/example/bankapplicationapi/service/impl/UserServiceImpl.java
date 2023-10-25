@@ -6,8 +6,7 @@ import org.example.bankapplicationapi.domain.repository.UserRepository;
 import org.example.bankapplicationapi.service.UserService;
 import org.example.bankapplicationapi.service.exception.BusinessException;
 import org.example.bankapplicationapi.service.exception.NotFoundException;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.crossstore.ChangeSetPersister;
+
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
