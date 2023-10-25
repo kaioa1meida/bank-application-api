@@ -26,9 +26,9 @@ dependencies {
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
-tasks.jar{
+tasks.jar {
 	manifest {
-		attributes["Main-Class"] = "org/example/bankapplicationapi/BankApplicationApi"
+		attributes["Main-Class"] = "org.example.bankapplicationapi.BankApplicationApi"
 	}
 }
 
